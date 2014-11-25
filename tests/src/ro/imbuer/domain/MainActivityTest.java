@@ -1,6 +1,7 @@
-package ro.imbuer;
+package ro.imbuer.domain;
 
 import android.test.ActivityUnitTestCase;
+import ro.imbuer.ui.MainActivity;
 
 /**
  * This is a simple framework for a test of an Application.  See
@@ -9,17 +10,15 @@ import android.test.ActivityUnitTestCase;
  * <p/>
  * To run this test, you can type:
  * adb shell am instrument -w \
- * -e class ro.imbuer.MainActivityTest \
- * ro.imbuer.tests/android.test.InstrumentationTestRunner
+ * -e class ro.imbuer.domain.MainActivityTest \
+ * ro.hobby.tests/android.test.InstrumentationTestRunner
  */
 public class MainActivityTest extends ActivityUnitTestCase<MainActivity> {
 
     public MainActivityTest() {
         super(MainActivity.class);
+
     }
 
-    public void testSomething() {
-        assertEquals(1, 2);
-    }
 
 }
