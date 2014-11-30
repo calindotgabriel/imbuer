@@ -1,10 +1,11 @@
 package ro.imbuer.ui;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import ro.imbuer.R;
 import ro.imbuer.entities.Hobby;
 import ro.imbuer.entities.Item;
@@ -13,7 +14,7 @@ import ro.imbuer.ui.adapter.HobbyRecyclerAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends Activity {
+public class MainActivity extends ActionBarActivity {
     /**
      * Called when the activity is first created.
      */
@@ -29,6 +30,11 @@ public class MainActivity extends Activity {
         mockList.add(new Hobby(3, "Programming"));
 
         initRecycleView(mockList, R.id.list, R.layout.item);
+
+       Toolbar mToolbar ;
+       mToolbar = (Toolbar) findViewById(R.id.my_awesome_toolbar);
+      // setSupportActionBar(mToolbar);
+
 
     }
 

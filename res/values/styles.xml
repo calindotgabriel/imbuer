@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="holo_blue_light">#ff33b5e5</color>
+    <color name="green">#36A245</color>
+    <color name="ripple_material_light">#40000000</color>
+    <style name="AppBaseTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">true</item>
+        <item name="colorPrimary">@color/holo_blue_light</item>
+        <item name="colorPrimaryDark">@color/green</item>
+        <item name="colorAccent">@color/ripple_material_light</item>
+    </style>
+</resources>

@@ -1,9 +1,23 @@
-<android.support.v7.widget.RecyclerView
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+    <android.support.v7.widget.Toolbar android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/my_awesome_toolbar"
+                            android:minHeight="?attr/actionBarSize"
+
+                            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
+    <android.support.v7.widget.RecyclerView
+
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
         tools:context=".MainActivity"
-/>
+>
+
+
+
+</android.support.v7.widget.RecyclerView></FrameLayout>
