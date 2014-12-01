@@ -13,9 +13,11 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 21 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="v7-appcompact" level="project" />
     <orderEntry type="library" name="libs" level="project" />
     <orderEntry type="module" module-name="appcompat" />
+    <orderEntry type="library" name="v7-appcompat" level="project" />
+    <orderEntry type="module" module-name="cardview-libmodule" />
+    <orderEntry type="library" name="android-support-v7-cardview" level="project" />
   </component>
 </module>
 

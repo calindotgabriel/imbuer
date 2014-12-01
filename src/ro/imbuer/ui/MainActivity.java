@@ -13,7 +13,7 @@ import android.widget.Toast;
 import ro.imbuer.R;
 import ro.imbuer.entities.Hobby;
 import ro.imbuer.entities.Item;
-import ro.imbuer.ui.adapter.HobbyRecyclerAdapter;
+import ro.imbuer.ui.adapter.ItemRecyclerAdapter;
 import ro.imbuer.ui.drawer.NavigationDrawerCallbacks;
 import ro.imbuer.ui.drawer.NavigationDrawerFragment;
 
@@ -35,24 +35,32 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerC
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        ArrayList<Item> mockList = new ArrayList<Item>();
-        mockList.add(new Hobby(1, "Running"));
-        mockList.add(new Hobby(2, "Dancing"));
-        mockList.add(new Hobby(3, "Programming"));
 
 
-        initRecycleView(mockList, R.id.list, R.layout.item);
+        initRecycleView(getMockList(), R.id.recycle_list, R.layout.item);
 
 
+        initDrawer();
 
+
+    }
+
+    private void initDrawer() {
         mToolbar = (Toolbar) findViewById(R.id.toolbar_actionbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         mNavigationDrawerFragment = (NavigationDrawerFragment) getFragmentManager().findFragmentById(R.id.fragment_drawer);
         mNavigationDrawerFragment.setup(R.id.fragment_drawer, (DrawerLayout) findViewById(R.id.drawer), mToolbar);
+    }
 
+    private ArrayList<Item> getMockList() {
+        ArrayList<Item> mockList = new ArrayList<Item>();
+        mockList.add(new Hobby(1, "Running"));
+        mockList.add(new Hobby(2, "Dancing"));
+        mockList.add(new Hobby(3, "Programming"));
 
+        return mockList;
     }
 
     /**
@@ -64,7 +72,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerC
     public void initRecycleView(List<Item> items, int list, int item) {
         RecyclerView recyclerView = (RecyclerView) findViewById(list);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setAdapter(new HobbyRecyclerAdapter(items, item));
+        recyclerView.setAdapter(new ItemRecyclerAdapter(items, item));
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setVisibility(View.VISIBLE);

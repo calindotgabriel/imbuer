@@ -21,4 +21,11 @@
         <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
         <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
     </style>
+
+
+     <style name="MaterialSpacing">
+         <item name="android:layout_marginLeft">@dimen/spacing_large</item>
+         <item name="android:layout_marginRight">@dimen/spacing_large</item>
+         <item name="android:layout_marginTop">@dimen/spacing_large</item>
+     </style>
 </resources>
