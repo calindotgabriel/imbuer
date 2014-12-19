@@ -1,3 +1,4 @@
+/*
 package ro.imbuer.ui.adapter;
 
 import android.support.v7.widget.RecyclerView;
@@ -14,10 +15,12 @@ import ro.imbuer.utils.Util;
 
 import java.util.List;
 
+*/
 /**
  * @author motan
  * @date 11/25/14
- */
+ *//*
+
 public class HobbyRecyclerAdapter extends RecyclerView.Adapter<HobbyRecyclerAdapter.ViewHolder> {
 
     private List<Item> items;
@@ -62,3 +65,4 @@ public class HobbyRecyclerAdapter extends RecyclerView.Adapter<HobbyRecyclerAdap
     }
 }
 
+*/
