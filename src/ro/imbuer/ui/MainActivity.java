@@ -13,6 +13,7 @@ import ro.imbuer.ui.drawer.NavigationDrawerCallbacks;
 import ro.imbuer.ui.drawer.NavigationDrawerFragment;
 import ro.imbuer.ui.fragments.FragmentClass;
 import ro.imbuer.ui.fragments.FragmentHobby;
+import ro.imbuer.ui.fragments.FragmentOptions;
 
 public class MainActivity extends ActionBarActivity implements NavigationDrawerCallbacks {
     /**
@@ -65,6 +66,9 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerC
                 break;
             case 1:
                 toReplaceFragment = new FragmentClass();
+                break;
+            case 2:
+                toReplaceFragment = new FragmentOptions();
                 break;
         }
 
