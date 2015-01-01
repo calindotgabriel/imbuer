@@ -12,6 +12,24 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <!--&lt;!&ndash; Receives the search request. &ndash;&gt;-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.SEARCH" />-->
+                <!--&lt;!&ndash; No category needed, because the Intent will specify this class component&ndash;&gt;-->
+            <!--</intent-filter>-->
+
+            <meta-data
+                    android:name="android.app.default_searchable"
+                    android:value="ui.MainActivity" />
+
+            <!-- Points to searchable meta data. -->
+            <meta-data android:name="android.app.searchable"
+                       android:resource="@xml/searchable" />
+        </activity>
+
+        <activity android:name=".controller.SearchableActvity" >
+
         </activity>
     </application>
 </manifest>
