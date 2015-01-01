@@ -17,13 +17,13 @@
                 layout="@layout/toolbar_default"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
+        <FrameLayout android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:id="@+id/listFragment">
 
-        <android.support.v7.widget.RecyclerView
-                android:id="@+id/recycle_list"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:clipToPadding="false"
-                tools:context=".MainActivity"/>
+
+        </FrameLayout>
+
 
 
     </LinearLayout>
